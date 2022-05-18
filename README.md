@@ -11,7 +11,7 @@
 
 ## General Info
 
-[DIO](https://www.dio.me/) Node course challenge to create a URL shortener API.
+[DIO](https://www.dio.me/) Node course challenge to create a URL shortener REST API.
 
 <br>	
 
@@ -47,7 +47,18 @@
 
 ## Setup
 
-TO DO
+You need [nodejs](https://nodejs.org/) installed to run this project.
+
+To start the typescript compiler in watch mode:
+```
+npm run build:watch: "tsc -w",
+```
+
+To start the server in watch mode:
+```
+npm run dev
+```
+
 <br>
 
 ## Status
