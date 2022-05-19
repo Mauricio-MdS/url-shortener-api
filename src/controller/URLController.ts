@@ -7,12 +7,12 @@ export default class URLController {
 
   public async redirect(req: Request, res: Response): Promise<void> {
     const {hash} = req.params;
-    const url = {
-      "originURL": "https://www.linkedin.com/in/mauricio-mds/",
-      "hash": "iIoHKM9AH",
-      "shortURL": "http://localhost:5000/iIoHKM9AH"
+    const url = await URLModel.findOne({hash})
+    if (url) {
+      res.redirect(url.originURL);
+      return;
     }
-    res.redirect(url.originURL);
+    res.status(400).json({error: 'URL not found'});
   }
 
   public async shorten(req: Request, res: Response): Promise<void> {
