@@ -1,6 +1,7 @@
 import { config } from "../config/Constants";
 import { Request, Response } from "express";
 import shortId from 'shortid';
+import { URLModel } from "../database/model/URL";
 
 export default class URLController {
 
@@ -15,9 +16,17 @@ export default class URLController {
   }
 
   public async shorten(req: Request, res: Response): Promise<void> {
-    const {originURL} = req.body;
+    const {originURL} = req.body; 
+    const url = await URLModel.findOne({originURL})
+
+    if (url) {
+      res.json(url);
+      return;
+    }
+
     const hash = shortId.generate();
     const shortURL = `${config.API_URL}/${hash}`;
-    res.json({originURL, hash, shortURL});
+    const newUrl = await URLModel.create({hash, shortURL, originURL});
+    res.json(newUrl);
   }
 }

@@ -38,16 +38,21 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" width=30px/>
   Javascript
 </div>
-<div>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" width=30px/>
-  Eslint
-</div>
 
 <br>
 
 ## Setup
 
-You need [nodejs](https://nodejs.org/) installed to run this project.
+* You need [nodejs](https://nodejs.org/) installed to run this project.
+* You also need a cloud mongodb. You can get one for free [here](https://www.mongodb.com/).
+* You must create this file: src/config/Constants.ts (sorry, but I can't share my password :) )
+
+```
+export const config = {
+  API_URL: 'http://localhost:5000',
+  MONGO_CONNECTION: < Insert mongodb connection string here >
+}
+```
 
 To start the typescript compiler in watch mode:
 ```
