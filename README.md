@@ -68,4 +68,14 @@ npm run dev
 
 ## Status
 
-TO DO
+You can post a JSON with an URL to be shortened:
+
+<img src="./assets/post.jpg" alt="Imsomnia App posting a JSON with an URL and receiving a response with a shortened URL">
+
+The URL and the hash is added to the database:
+
+<img src="./assets/mongodb.jpg" alt="Database containing the URL and the hash">
+
+If you try to access the shortened URL, the database is searched and you are redirected to the original URL:
+
+<img src="./assets/get.jpg" alt="Imsomnia App using the GET method for the shortened URL and showing the original URL">
