@@ -11,7 +11,7 @@
 
 ## General Info
 
-[DIO](https://www.dio.me/) Node course challenge to create a URL shortener REST API.
+A URL shortener REST API created using Nodejs, Typescript and MongoDB.
 
 <br>	
 
@@ -45,7 +45,7 @@
 
 * You need [nodejs](https://nodejs.org/) installed to run this project.
 * You also need a cloud mongodb. You can get one for free [here](https://www.mongodb.com/).
-* You must create this file: src/config/Constants.ts (sorry, but I can't share my password :) )
+* You must create this file: src/config/Constants.ts
 
 ```
 export const config = {
